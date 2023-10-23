@@ -46,6 +46,11 @@ class Cliente
         return $this->celular;
     }
 
+    public function getCelularFormatado(): string
+    {
+        return preg_replace("/(\d{2})(\d{1})(\d{4})(\d{4})/", "($1) $2 $3-$4", $this->celular);
+    }
+
     public function setCelular($celular): void
     {
         $this->celular = $celular;

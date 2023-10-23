@@ -23,3 +23,5 @@ echo Produto::valorTotalProdutos() . PHP_EOL;
 $carrinho1 = new Carrinho($produto3);
 
 echo $carrinho1->getValorTotal() . PHP_EOL;
+
+echo $cliente1->getCelularFormatado() . PHP_EOL;
