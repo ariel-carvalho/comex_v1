@@ -1,7 +1,9 @@
 <?php
 
-require_once "src/Cliente.php";
-require_once "src/Produto.php";
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Ariel\Comex\Cliente;
+use Ariel\Comex\Produto;
 
 $cliente1 = new Cliente("Ariel","ariell_carvalho@hotmail.com","(11) 94714-0300", "Rua Marquês de Praia Grande, 285",0);
 

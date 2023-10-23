@@ -1,0 +1,16 @@
+{
+    "name": "ariel/comex",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Ariel\\Comex\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ariel Carvalho",
+            "email": "ariell_carvalho@hotmail.com"
+        }
+    ],
+    "require": {}
+}

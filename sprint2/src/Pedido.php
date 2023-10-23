@@ -1,7 +1,6 @@
 <?php
 
-require_once "src/Cliente.php";
-require_once "src/Produto.php";
+namespace Ariel\Comex;
 
 class Pedido 
 {

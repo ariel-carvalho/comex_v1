@@ -1,5 +1,7 @@
 <?php
 
+namespace Ariel\Comex;
+
 class Produto 
 {
     private string $nome;

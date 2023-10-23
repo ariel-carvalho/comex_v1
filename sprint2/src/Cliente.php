@@ -1,5 +1,7 @@
 <?php
 
+namespace Ariel\Comex;
+
 class Cliente 
 {
     private string $nome;
@@ -7,6 +9,8 @@ class Cliente
     private string $celular;
     private string $endereco;
     private int $comprasRealizadas;
+    private array $pedidos;
+
 
     public function __construct(string $nome, string $email, string $celular, string $endereco, int $comprasRealizadas)
     {
@@ -66,6 +70,17 @@ class Cliente
         }
 
         $this->comprasRealizadas += $qtdeCompra;
+    }
+
+    public function getPedidos(): array
+    {
+        return $this->pedidos;
+    }
+
+    public function setPedidos(Pedido $pedido): void
+    {
+        array_push  ($this->pedidos, $pedido);
+        return;
     }
 
 }
