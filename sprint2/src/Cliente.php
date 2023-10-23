@@ -77,7 +77,7 @@ class Cliente
         return $this->pedidos;
     }
 
-    public function setPedidos(Pedido $pedido): void
+    public function AdicionaPedido(Pedido $pedido): void
     {
         array_push  ($this->pedidos, $pedido);
         return;

@@ -28,4 +28,9 @@ class Produto
     {
         return self::$qtdeTotalEstoque;
     }
+
+    public function getPreco(): float
+    {
+        return $this->preco;
+    }
 }
