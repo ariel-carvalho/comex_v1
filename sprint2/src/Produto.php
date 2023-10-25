@@ -1,6 +1,8 @@
 <?php
 
 namespace Ariel\Comex;
+use Ariel\Comex\Estoque\CompraNegativaException;
+use Ariel\Comex\Estoque\EstoqueNegativoException;
 
 class Produto 
 {
@@ -32,5 +34,25 @@ class Produto
     public function getPreco(): float
     {
         return $this->preco;
+    }
+
+    public function getQtdeEstoque(): int
+    {
+        return $this->qtdeEstoque;
+    }
+
+    public function RealizaCompra($qtdeEstoque): void
+    {
+        if ($qtdeEstoque <= 0)
+        {
+            throw new CompraNegativaException();
+        }
+        else if ($qtdeEstoque > $this->qtdeEstoque)
+        {
+            throw new EstoqueNegativoException();
+        }
+
+        $this->qtdeEstoque -= $qtdeEstoque;
+        echo "Compra realizada com sucesso";
     }
 }
