@@ -1,14 +1,13 @@
 <?php
 
 namespace Ariel\Comex;
-
 class Carrinho
 {
-    private $produto;
+    private Produto $produto;
 
     public function __construct(Produto $produto)
     {
-       $this->produto = $produto;
+        $this->produto = $produto;
     }
   
      public function getProduto()
@@ -37,6 +36,4 @@ class Carrinho
     {
         return $this->getValorCompra() + $this->getFrete();
     }
-
-
 }

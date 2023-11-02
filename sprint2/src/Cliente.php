@@ -68,13 +68,22 @@ class Cliente
 
     public function realizarCompra(int $qtdeCompra): void
     {
-        if ($qtdeCompra <= 0)
+        try
         {
-            echo "Valor precisa ser positivo";
-            return;
+            if ($qtdeCompra <= 0)
+            {
+                throw new \InvalidArgumentException ("Valor precisa ser positivo");
+            }
+        }
+        
+        catch (\InvalidArgumentException $e)
+        {
+            echo $e->getMessage() . PHP_EOL;
         }
 
         $this->comprasRealizadas += $qtdeCompra;
+
+        return;        
     }
 
     public function getPedidos(): array
