@@ -6,6 +6,8 @@ use Ariel\Comex\Interfaces\MeioDePagto;
 
 class Pedido 
 {
+    
+    private bool $statusPagto = false;
     private int $id;
     private $cliente;
     private $produto;
@@ -23,4 +25,15 @@ class Pedido
     {
         return $this->meioDePagto;
     }
+
+    public function pagar()
+    {
+        $this->statusPagto = $this->meioDePagto->processaPagto();
+    }
+    public function getStatusPagamento()
+    {
+        return $this->statusPagto;
+    }
+
+
 }
