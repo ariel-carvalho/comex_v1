@@ -12,5 +12,7 @@
             "email": "ariell_carvalho@hotmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "phpunit/phpunit": "^10.4"
+    }
 }
