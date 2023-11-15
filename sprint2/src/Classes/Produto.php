@@ -19,7 +19,7 @@ class Produto
         $this->qtdeEstoque = $qtdeEstoque;
 
         self::$numeroDeProdutos++;
-        self::$qtdeTotalEstoque += $qtdeEstoque;
+        self::$qtdeEstoque += $qtdeEstoque;
     }
   
     public function __destruct()
